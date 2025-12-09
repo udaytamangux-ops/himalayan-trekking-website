@@ -20,6 +20,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-primary);
     color: var(--color-text);
@@ -54,6 +58,34 @@ img {
     display: block;
 }
 
+/* -- Animations -- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* -- Typography & Utilities -- */
 .container {
     max-width: 1200px;
@@ -64,14 +96,14 @@ img {
 .section-title {
     text-align: center;
     font-size: 2.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-weight: 700;
 }
 
 .section-subtitle {
     text-align: center;
     color: #666;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
 }
@@ -177,6 +209,7 @@ header {
 /* -- Hero Section -- */
 .hero {
     height: 100vh;
+    min-height: 700px;
     background-image: url('images/hero_himalayas.png');
     background-size: cover;
     background-position: center;
@@ -187,8 +220,9 @@ header {
     justify-content: center;
     text-align: center;
     padding-top: 80px;
-    /* Offset for fixed header */
     position: relative;
+    margin-bottom: 4rem;
+    /* Spacing after hero */
 }
 
 .hero::before {
@@ -199,7 +233,6 @@ header {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
-    /* Slight overlay */
     z-index: 1;
 }
 
@@ -212,8 +245,8 @@ header {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
+    font-size: 4rem;
+    margin-bottom: 3rem;
     color: var(--color-white);
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -222,11 +255,11 @@ header {
 .search-container {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: flex-end;
     flex-wrap: wrap;
 }
@@ -240,7 +273,7 @@ header {
 }
 
 .search-input-group label {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #666;
     margin-bottom: 0.5rem;
@@ -250,7 +283,7 @@ header {
 
 .search-input-group input {
     width: 100%;
-    padding: 12px 15px;
+    padding: 14px 18px;
     border: 1px solid #ddd;
     border-radius: var(--radius-sm);
     font-family: inherit;
@@ -266,11 +299,10 @@ header {
 }
 
 .search-btn {
-    padding: 12px 30px;
-    height: 48px;
-    /* Match input height roughly */
+    padding: 14px 35px;
+    height: 52px;
     border-radius: var(--radius-sm);
-    font-size: 1rem;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,13 +310,14 @@ header {
 
 /* -- Featured Treks & Grid -- */
 .treks-section {
-    padding: 6rem 0;
+    padding: 10rem 0;
+    /* Long scrolling - Increased usage */
 }
 
 .trek-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
 .trek-card {
@@ -303,7 +336,7 @@ header {
 }
 
 .trek-image {
-    height: 280px;
+    height: 300px;
     overflow: hidden;
     position: relative;
 }
@@ -320,18 +353,18 @@ header {
 }
 
 .trek-content {
-    padding: 2rem;
+    padding: 2.5rem;
 }
 
 .trek-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
 }
 
 .trek-meta {
     color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
     display: flex;
     gap: 1.5rem;
     font-weight: 500;
@@ -346,20 +379,19 @@ header {
 
 /* -- Choose Us -- */
 .choose-us {
-    padding: 6rem 0;
+    padding: 10rem 0;
     background-color: #fff;
-    /* Clean white background */
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
+    gap: 4rem;
     text-align: center;
 }
 
 .feature-item {
-    padding: 3rem 2rem;
+    padding: 3.5rem 2.5rem;
     background: var(--color-secondary);
     border-radius: var(--radius-md);
     transition: var(--transition);
@@ -372,32 +404,33 @@ header {
 }
 
 .feature-icon {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--color-primary);
     margin-bottom: 1.5rem;
 }
 
 .feature-item h3 {
     margin-bottom: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 /* -- Footer -- */
 footer {
     background-color: var(--color-primary);
     color: var(--color-white);
-    padding: 4rem 0 2rem;
+    padding: 6rem 0 3rem;
     text-align: center;
 }
 
 .footer-links {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .footer-links a {
     color: rgba(255, 255, 255, 0.7);
     margin: 0 1.5rem;
     font-weight: 500;
+    font-size: 1.1rem;
 }
 
 .footer-links a:hover {
@@ -406,13 +439,13 @@ footer {
 
 /* -- Contact Form -- */
 .contact-section {
-    padding: 6rem 0;
+    padding: 8rem 0;
 }
 
 .contact-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 4rem;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -453,14 +486,14 @@ footer {
 
 /* -- About Page -- */
 .about-section {
-    padding: 6rem 0;
+    padding: 8rem 0;
 }
 
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 3rem;
-    margin-top: 4rem;
+    gap: 4rem;
+    margin-top: 5rem;
 }
 
 .team-member {
@@ -508,18 +541,30 @@ footer {
 
     .hero {
         padding: 0 20px;
+        height: auto;
+        min-height: 80vh;
+        margin-bottom: 2rem;
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
+        margin-top: 4rem;
     }
 
     .search-container {
         flex-direction: column;
         align-items: stretch;
+        padding: 1.5rem;
     }
 
     .search-btn {
         margin-top: 1rem;
+    }
+
+    .treks-section,
+    .choose-us,
+    .about-section,
+    .contact-section {
+        padding: 5rem 0;
     }
 }
