@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hikes | Himalayan Adventures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">Himalayan<span style="color:var(--color-accent)">Adventures</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="treks.html">Treks</a></li>
+                    <li><a href="hikes.html">Hikes</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="treks-section container">
+        <h2 class="section-title">Day Hikes & Short Walks</h2>
+        <p class="section-subtitle">Experience nature without the long commitment</p>
+
+        <div class="filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">1 Day</button>
+            <button class="filter-btn">2-3 Days</button>
+        </div>
+
+        <div class="trek-grid">
+            <!-- Hike 1 -->
+            <div class="trek-card">
+                <div class="trek-image">
+                    <img src="images/trek_annapurna.png" alt="Nagarkot Hike">
+                </div>
+                <div class="trek-content">
+                    <h3 class="trek-title">Nagarkot Panorama</h3>
+                    <div class="trek-meta">
+                        <span>1 Day</span>
+                        <span>Easy</span>
+                    </div>
+                    <p class="trek-description">A beautiful day hike near Kathmandu offering panoramic views of the
+                        Himalayas including Everest.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- Hike 2 -->
+            <div class="trek-card">
+                <div class="trek-image">
+                    <img src="images/trek_langtang.png" alt="Shivapuri Hike">
+                </div>
+                <div class="trek-content">
+                    <h3 class="trek-title">Shivapuri Peak</h3>
+                    <div class="trek-meta">
+                        <span>1 Day</span>
+                        <span>Moderate</span>
+                    </div>
+                    <p class="trek-description">Walk through the lush Shivapuri National Park to reach the peak for
+                        amazing city and mountain views.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- Hike 3 -->
+            <div class="trek-card">
+                <div class="trek-image">
+                    <img src="images/trek_everest.png" alt="Dhampus Hike">
+                </div>
+                <div class="trek-content">
+                    <h3 class="trek-title">Dhampus Village</h3>
+                    <div class="trek-meta">
+                        <span>2 Days</span>
+                        <span>Easy</span>
+                    </div>
+                    <p class="trek-description">A gentle walk through traditional Gurung villages with a stunning
+                        backdrop of the Annapurnas.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2024 Himalayan Adventures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
