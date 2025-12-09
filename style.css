@@ -582,6 +582,129 @@ button[type="submit"] {
     box-shadow: var(--shadow-md);
 }
 
+/* -- Blog Section -- */
+.blog-section {
+    padding: 8rem 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.blog-card {
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.blog-image {
+    height: 200px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.1);
+}
+
+.blog-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blog-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.blog-desc {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* -- Full Blog View -- */
+.blog-view-section {
+    padding: 8rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blog-main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.blog-meta {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-meta span {
+    margin-right: 1.5rem;
+}
+
+.blog-body {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 5rem;
+}
+
+.blog-body p {
+    margin-bottom: 1.5rem;
+}
+
+/* -- Related Posts -- */
+.related-posts-section {
+    padding: 6rem 0;
+    background-color: #f9fbfd;
+}
+
+.related-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.related-card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
 /* -- Mobile Queries -- */
 @media (max-width: 768px) {
     .hamburger {
@@ -635,7 +758,8 @@ button[type="submit"] {
         margin-top: 1rem;
     }
 
-    .trek-grid {
+    .trek-grid,
+    .blog-grid {
         grid-template-columns: 1fr;
         /* Single column for cards */
         gap: 2.5rem;
@@ -654,7 +778,8 @@ button[type="submit"] {
     .treks-section,
     .choose-us,
     .about-section,
-    .contact-section {
+    .contact-section,
+    .blog-section {
         padding: 5rem 0;
     }
 
@@ -665,5 +790,9 @@ button[type="submit"] {
     form {
         padding: 1.5rem !important;
         /* Override inline padding if any */
+    }
+
+    .blog-main-title {
+        font-size: 2.2rem;
     }
 }
