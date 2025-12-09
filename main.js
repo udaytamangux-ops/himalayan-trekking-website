@@ -25,48 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------
-    // 3. Opening Animation (Fade-in on Load)
+    // 3. Initialize AOS (Animate On Scroll)
     // ----------------------------------------------------
-    // Select elements to animate on load
-    const heroElements = document.querySelectorAll('.hero h1, .hero p, .hero-search-wrapper');
-    heroElements.forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.animation = `fadeIn 1s ease-out forwards ${index * 0.2}s`; // Staggered delay
-    });
-
-    // ----------------------------------------------------
-    // 4. Scroll Animations (Fade-in on Scroll)
-    // ----------------------------------------------------
-    const scrollElements = document.querySelectorAll('.section-title, .section-subtitle, .trek-card, .feature-item, .team-member, .contact-container');
-
-    const elementInView = (el, dividend = 1) => {
-        const elementTop = el.getBoundingClientRect().top;
-        return (elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend);
-    };
-
-    const displayScrollElement = (element) => {
-        element.classList.add('fade-in');
-        element.classList.remove('hidden');
-    };
-
-    const handleScrollAnimation = () => {
-        scrollElements.forEach((el) => {
-            if (elementInView(el, 1.25)) { // Trigger slightly before element is fully in view
-                displayScrollElement(el);
-            }
+    // This replaces our custom intersection observer logic
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true, // Animation happens only once - while scrolling down
+            offset: 120, // Offset (in px) from the original trigger point
         });
-    };
-
-    // Initialize elements as hidden
-    scrollElements.forEach((el) => {
-        el.classList.add('hidden');
-    });
-
-    // Trigger once on load to show elements already in view
-    handleScrollAnimation();
-
-    // Listen for scroll event
-    window.addEventListener('scroll', () => {
-        handleScrollAnimation();
-    });
+    } else {
+        console.warn('AOS library not loaded');
+    }
 });

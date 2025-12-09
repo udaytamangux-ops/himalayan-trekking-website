@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Himalayan Adventures | Trekking in Nepal</title>
+    <!-- UPDATE 1: Poppins Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- UPDATE 5: AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,9 +23,11 @@
             <a href="index.html" class="logo">Himalayan<span style="color:var(--color-accent)">Adventures</span></a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="treks.html">Treks</a></li>
                     <li><a href="hikes.html">Hikes</a></li>
+                    <!-- UPDATE 3: Blog Link -->
+                    <li><a href="#">Blog</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -38,7 +42,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container hero-search-wrapper">
+        <div class="container hero-search-wrapper" data-aos="fade-up" data-aos-duration="1000">
             <h1>Pick your trek destination</h1>
 
             <div class="search-container">
@@ -61,12 +65,12 @@
 
     <!-- Featured Treks -->
     <section class="treks-section container">
-        <h2 class="section-title">Featured Destinations</h2>
-        <p class="section-subtitle">Discover our most popular adventures</p>
+        <h2 class="section-title" data-aos="fade-up">Featured Destinations</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Discover our most popular adventures</p>
 
         <div class="trek-grid">
             <!-- Trek 1 -->
-            <div class="trek-card">
+            <div class="trek-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="trek-image">
                     <img src="images/trek_everest.png" alt="Everest Base Camp">
                 </div>
@@ -83,7 +87,7 @@
             </div>
 
             <!-- Trek 2 -->
-            <div class="trek-card">
+            <div class="trek-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="trek-image">
                     <img src="images/trek_annapurna.png" alt="Annapurna Circuit">
                 </div>
@@ -100,7 +104,7 @@
             </div>
 
             <!-- Trek 3 -->
-            <div class="trek-card">
+            <div class="trek-card" data-aos="fade-up" data-aos-delay="400">
                 <div class="trek-image">
                     <img src="images/trek_langtang.png" alt="Langtang Valley">
                 </div>
@@ -120,23 +124,64 @@
     <!-- Why Choose Us -->
     <section class="choose-us">
         <div class="container">
-            <h2 class="section-title">Why Choose Us</h2>
+            <h2 class="section-title" data-aos="fade-up">Why Choose Us</h2>
             <div class="features-grid">
-                <div class="feature-item">
+                <div class="feature-item" data-aos="zoom-in" data-aos-delay="100">
                     <div class="feature-icon">&#9733;</div>
                     <h3>Expert Guides</h3>
-                    <p>Our guides are certified, experienced, and passionate about the mountains.</p>
+                    <p>Our guides are certified, experienced, and passionate about the mountains. They ensure your
+                        journey is safe and enriching.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" data-aos="zoom-in" data-aos-delay="200">
                     <div class="feature-icon">&#9842;</div>
                     <h3>Eco-Friendly</h3>
-                    <p>We practice leave-no-trace principles and support local conservation efforts.</p>
+                    <p>We practice leave-no-trace principles and support local conservation efforts to preserve the
+                        pristine beauty of the Himalayas.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" data-aos="zoom-in" data-aos-delay="300">
                     <div class="feature-icon">&#10004;</div>
                     <h3>Safety First</h3>
-                    <p>Your safety is our priority. We are equipped for all emergency situations.</p>
+                    <p>Your safety is our priority. We are equipped for all emergency situations and carry comprehensive
+                        first aid kits.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPDATE 4: Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What Our Clients Say</h2>
+            <p class="section-subtitle" data-aos="fade-up">Read stories from our happy trekkers</p>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card" data-aos="fade-right" data-aos-delay="100">
+                    <p class="testimonial-text">"The trip of a lifetime! The guides were incredibly knowledgeable and
+                        the views were unmatched. I felt safe the entire time."</p>
+                    <p class="testimonial-author">- Sarah Jenkins, UK</p>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <p class="testimonial-text">"Himalayan Adventures took care of everything. From the moment we landed
+                        to the moment we left, it was seamless."</p>
+                    <p class="testimonial-author">- Michael Chen, USA</p>
+                </div>
+                <div class="testimonial-card" data-aos="fade-left" data-aos-delay="300">
+                    <p class="testimonial-text">"The team really cares about the environment and the local culture. It
+                        felt good to trek with a responsible company."</p>
+                    <p class="testimonial-author">- Emma Lars, Germany</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="container" style="padding-bottom: 8rem;" data-aos="fade-up">
+        <div
+            style="background: linear-gradient(135deg, #2F4F4F, #1a2f2f); color: white; padding: 4rem; border-radius: 20px; text-align: center; position: relative; overflow: hidden;">
+            <div style="position: relative; z-index: 2;">
+                <h2 style="color: white; margin-bottom: 1rem;">Early Bird Special!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Book your Spring 2025 trek now and get 15% off.</p>
+                <a href="contact.html" class="btn">Inquire Now</a>
             </div>
         </div>
     </section>
@@ -144,15 +189,17 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-links">
+            <div class="footer-links" data-aos="fade-up">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="#terms">Terms of Service</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <p>&copy; 2024 Himalayan Adventures. All rights reserved.</p>
+            <p data-aos="fade-up" data-aos-delay="100">&copy; 2024 Himalayan Adventures. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- UPDATE 5: AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
 

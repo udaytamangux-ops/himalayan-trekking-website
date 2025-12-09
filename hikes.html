@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hikes | Himalayan Adventures</title>
+    <!-- UPDATE: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- UPDATE: AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         .filters {
@@ -52,7 +54,9 @@
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="treks.html">Treks</a></li>
-                    <li><a href="hikes.html">Hikes</a></li>
+                    <li><a href="hikes.html" class="active">Hikes</a></li>
+                    <!-- UPDATE: Blog Link -->
+                    <li><a href="#">Blog</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -65,11 +69,12 @@
         </div>
     </header>
 
-    <section class="treks-section container" style="padding-top: 120px;">
-        <h2 class="section-title">Day Hikes & Short Walks</h2>
-        <p class="section-subtitle">Experience nature without the long commitment</p>
+    <section class="treks-section container" style="padding-top: 100px;">
+        <h2 class="section-title" data-aos="fade-up">Day Hikes & Short Walks</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Experience nature without the long
+            commitment</p>
 
-        <div class="filters">
+        <div class="filters" data-aos="fade-up" data-aos-delay="200">
             <button class="filter-btn active">All</button>
             <button class="filter-btn">1 Day</button>
             <button class="filter-btn">2-3 Days</button>
@@ -77,7 +82,7 @@
 
         <div class="trek-grid">
             <!-- Hike 1 -->
-            <div class="trek-card">
+            <div class="trek-card" data-aos="fade-up">
                 <div class="trek-image">
                     <img src="images/trek_annapurna.png" alt="Nagarkot Hike">
                 </div>
@@ -94,7 +99,7 @@
             </div>
 
             <!-- Hike 2 -->
-            <div class="trek-card">
+            <div class="trek-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="trek-image">
                     <img src="images/trek_langtang.png" alt="Shivapuri Hike">
                 </div>
@@ -111,7 +116,7 @@
             </div>
 
             <!-- Hike 3 -->
-            <div class="trek-card">
+            <div class="trek-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="trek-image">
                     <img src="images/trek_everest.png" alt="Dhampus Hike">
                 </div>
@@ -140,6 +145,8 @@
         </div>
     </footer>
 
+    <!-- UPDATE: AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
 

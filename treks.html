@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treks | Himalayan Adventures</title>
+    <!-- UPDATE: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- UPDATE: AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         .filters {
@@ -51,8 +53,10 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="treks.html">Treks</a></li>
+                    <li><a href="treks.html" class="active">Treks</a></li>
                     <li><a href="hikes.html">Hikes</a></li>
+                    <!-- UPDATE: Blog Link -->
+                    <li><a href="#">Blog</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -65,11 +69,12 @@
         </div>
     </header>
 
-    <section class="treks-section container" style="padding-top: 120px;">
-        <h2 class="section-title">All Trekking Adventures</h2>
-        <p class="section-subtitle">Explore the best treks Nepal has to offer</p>
+    <section class="treks-section container" style="padding-top: 100px;">
+        <h2 class="section-title" data-aos="fade-up">All Trekking Adventures</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Explore the best treks Nepal has to offer
+        </p>
 
-        <div class="filters">
+        <div class="filters" data-aos="fade-up" data-aos-delay="200">
             <button class="filter-btn active">All</button>
             <button class="filter-btn">Easy</button>
             <button class="filter-btn">Moderate</button>
@@ -78,7 +83,7 @@
 
         <div class="trek-grid">
             <!-- Trek 1 -->
-            <div class="trek-card">
+            <div class="trek-card" data-aos="fade-up">
                 <div class="trek-image">
                     <img src="images/trek_everest.png" alt="Everest Base Camp">
                 </div>
@@ -95,7 +100,7 @@
             </div>
 
             <!-- Trek 2 -->
-            <div class="trek-card">
+            <div class="trek-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="trek-image">
                     <img src="images/trek_annapurna.png" alt="Annapurna Circuit">
                 </div>
@@ -112,7 +117,7 @@
             </div>
 
             <!-- Trek 3 -->
-            <div class="trek-card">
+            <div class="trek-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="trek-image">
                     <img src="images/trek_langtang.png" alt="Langtang Valley">
                 </div>
@@ -128,7 +133,7 @@
                 </div>
             </div>
             <!-- Trek 4 -->
-            <div class="trek-card">
+            <div class="trek-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="trek-image">
                     <img src="images/trek_annapurna.png" alt="Mardi Himal">
                 </div>
@@ -144,7 +149,7 @@
                 </div>
             </div>
             <!-- Trek 5 -->
-            <div class="trek-card">
+            <div class="trek-card" data-aos="fade-up" data-aos-delay="400">
                 <div class="trek-image">
                     <img src="images/trek_everest.png" alt="Gokyo Ri">
                 </div>
@@ -172,6 +177,8 @@
         </div>
     </footer>
 
+    <!-- UPDATE: AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
 

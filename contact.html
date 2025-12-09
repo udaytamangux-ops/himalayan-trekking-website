@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Himalayan Adventures</title>
+    <!-- UPDATE: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- UPDATE: AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,8 +25,10 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="treks.html">Treks</a></li>
                     <li><a href="hikes.html">Hikes</a></li>
+                    <!-- UPDATE: Blog Link -->
+                    <li><a href="#">Blog</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="hamburger">
@@ -35,13 +39,15 @@
         </div>
     </header>
 
-    <section class="contact-section container" style="padding-top: 140px;">
-        <h2 class="section-title">Get in Touch</h2>
-        <p class="section-subtitle">We'd love to hear from you. Start planning your adventure today.</p>
+    <section class="contact-section container" style="padding-top: 100px;">
+        <h2 class="section-title" data-aos="fade-up">Get in Touch</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">We'd love to hear from you. Start planning
+            your adventure today.</p>
 
         <div class="contact-container">
             <form action="#" method="POST"
-                style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow-md);">
+                style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow-md);"
+                data-aos="fade-right" data-aos-delay="200">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -62,7 +68,7 @@
                 <button type="submit" class="btn" style="width: 100%;">Send Message</button>
             </form>
 
-            <div style="text-align: center;">
+            <div style="text-align: center;" data-aos="fade-left" data-aos-delay="300">
                 <h3 style="margin-bottom: 2rem; font-size: 1.5rem;">Connect With Us</h3>
                 <div style="display: flex; justify-content: center; gap: 2rem; font-size: 1.2rem; font-weight: 600;">
                     <a href="#" style="color: var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
@@ -97,6 +103,8 @@
         </div>
     </footer>
 
+    <!-- UPDATE: AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
 

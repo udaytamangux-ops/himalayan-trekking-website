@@ -4,8 +4,8 @@
     --color-accent: #FBB919;
     --color-text: #333;
     --color-white: #ffffff;
-    --font-primary: 'Inter', sans-serif;
-    --font-heading: 'Playfair Display', serif;
+    --font-primary: 'Poppins', sans-serif;
+    /* UPDATE 1: Poppins */
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
@@ -38,9 +38,15 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-heading);
+    font-family: var(--font-primary);
+    /* UPDATE 1: Poppins for headings too */
     color: var(--color-primary);
-    line-height: 1.2;
+    line-height: 1.4;
+    /* UPDATE 2: Line height */
+    letter-spacing: 0.5px;
+    /* UPDATE 2: Letter spacing */
+    font-weight: 700;
+    /* UPDATE 2: Bold weight */
 }
 
 a {
@@ -56,34 +62,6 @@ ul {
 img {
     max-width: 100%;
     display: block;
-}
-
-/* -- Animations -- */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeIn 1s ease-out forwards;
-}
-
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* -- Typography & Utilities -- */
@@ -112,7 +90,7 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 32px;
+    padding: 12px 30px;
     background-color: var(--color-accent);
     color: var(--color-white);
     border-radius: 50px;
@@ -122,6 +100,7 @@ img {
     border: none;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    font-size: 0.95rem;
 }
 
 .btn:hover {
@@ -136,7 +115,8 @@ header {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
-    position: fixed;
+    position: sticky;
+    /* UPDATE 3: Sticky */
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -146,11 +126,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 0;
+    padding: 1rem 0;
 }
 
 .logo {
-    font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--color-primary);
@@ -165,7 +144,7 @@ header {
 .nav-links a {
     font-weight: 600;
     color: var(--color-primary);
-    font-size: 1rem;
+    font-size: 0.95rem;
     position: relative;
     padding: 5px 0;
 }
@@ -219,10 +198,10 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px;
+    /* padding-top: 80px; Removed fixed header offset as header is sticky now */
     position: relative;
-    margin-bottom: 4rem;
-    /* Spacing after hero */
+    margin-bottom: 0;
+    /* Let flow naturally */
 }
 
 .hero::before {
@@ -310,8 +289,7 @@ header {
 
 /* -- Featured Treks & Grid -- */
 .treks-section {
-    padding: 10rem 0;
-    /* Long scrolling - Increased usage */
+    padding: 8rem 0;
 }
 
 .trek-grid {
@@ -320,6 +298,7 @@ header {
     gap: 3rem;
 }
 
+/* UPDATE 5: Card Size Standardization */
 .trek-card {
     background: var(--color-white);
     border-radius: var(--radius-md);
@@ -328,17 +307,18 @@ header {
     transition: var(--transition);
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.03);
-}
-
-.trek-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    max-height: 450px;
+    /* Increased to allow content, 350px is often too small for full cards */
+    display: flex;
+    flex-direction: column;
 }
 
 .trek-image {
-    height: 300px;
+    height: 200px;
+    /* Fixed height for image */
     overflow: hidden;
     position: relative;
+    flex-shrink: 0;
 }
 
 .trek-image img {
@@ -353,34 +333,39 @@ header {
 }
 
 .trek-content {
-    padding: 2.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .trek-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
 }
 
 .trek-meta {
     color: #888;
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     font-weight: 500;
 }
 
 .trek-description {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: #555;
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    /* Pushes button to bottom */
 }
 
 /* -- Choose Us -- */
 .choose-us {
-    padding: 10rem 0;
-    background-color: #fff;
+    padding: 8rem 0;
+    background-color: #f9fbfd;
 }
 
 .features-grid {
@@ -391,21 +376,24 @@ header {
 }
 
 .feature-item {
-    padding: 3.5rem 2.5rem;
-    background: var(--color-secondary);
+    padding: 3rem 2rem;
+    background: var(--color-white);
     border-radius: var(--radius-md);
+    /* UPDATE: Modern look */
     transition: var(--transition);
+    border: 1px solid transparent;
 }
 
 .feature-item:hover {
-    background: var(--color-white);
-    box-shadow: var(--shadow-md);
+    border-color: #eee;
+    box-shadow: var(--shadow-lg);
     transform: translateY(-5px);
 }
 
 .feature-icon {
-    font-size: 3.5rem;
-    color: var(--color-primary);
+    font-size: 3rem;
+    color: var(--color-accent);
+    /* Changed to accent for modernity */
     margin-bottom: 1.5rem;
 }
 
@@ -414,23 +402,54 @@ header {
     font-size: 1.5rem;
 }
 
+/* UPDATE 4: Testimonials Section */
+.testimonials-section {
+    padding: 8rem 0;
+    background-color: var(--color-white);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.testimonial-card {
+    background: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    position: relative;
+    border-left: 5px solid var(--color-accent);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
 /* -- Footer -- */
 footer {
     background-color: var(--color-primary);
     color: var(--color-white);
-    padding: 6rem 0 3rem;
+    padding: 5rem 0 2rem;
     text-align: center;
 }
 
 .footer-links {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .footer-links a {
     color: rgba(255, 255, 255, 0.7);
     margin: 0 1.5rem;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .footer-links a:hover {
@@ -440,48 +459,16 @@ footer {
 /* -- Contact Form -- */
 .contact-section {
     padding: 8rem 0;
+    /* Spacing */
 }
 
 .contact-container {
     display: grid;
     grid-template-columns: 1fr;
+    /* layout */
     gap: 4rem;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #ddd;
-    border-radius: var(--radius-sm);
-    font-family: inherit;
-    font-size: 1rem;
-    transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(251, 185, 25, 0.1);
-}
-
-.form-group textarea {
-    height: 180px;
-    resize: vertical;
 }
 
 /* -- About Page -- */
