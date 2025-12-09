@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -38,16 +38,30 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Adventure Awaits in the Himalayas</h1>
-            <p>Experience the beauty of Nepal with our expert trekking guides.</p>
-            <a href="treks.html" class="btn">Explore Treks</a>
+        <div class="container hero-search-wrapper">
+            <h1>Pick your trek destination</h1>
+
+            <div class="search-container">
+                <div class="search-input-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" placeholder="Where do you want to go?" />
+                </div>
+                <div class="search-input-group">
+                    <label for="dates">Dates</label>
+                    <input type="date" id="dates" />
+                </div>
+                <div class="search-input-group">
+                    <label for="travelers">Travelers</label>
+                    <input type="number" id="travelers" placeholder="No. of people" min="1" />
+                </div>
+                <button class="btn search-btn">Explore Treks</button>
+            </div>
         </div>
     </section>
 
     <!-- Featured Treks -->
     <section class="treks-section container">
-        <h2 class="section-title">Featured Treks</h2>
+        <h2 class="section-title">Featured Destinations</h2>
         <p class="section-subtitle">Discover our most popular adventures</p>
 
         <div class="trek-grid">

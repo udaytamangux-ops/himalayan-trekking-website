@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
@@ -16,17 +16,20 @@
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             flex-wrap: wrap;
         }
 
         .filter-btn {
-            padding: 8px 16px;
-            border: 1px solid #ddd;
-            border-radius: 20px;
+            padding: 10px 24px;
+            border: 1px solid #eee;
+            border-radius: 50px;
             background: white;
             cursor: pointer;
             transition: var(--transition);
+            font-weight: 500;
+            color: #555;
+            box-shadow: var(--shadow-sm);
         }
 
         .filter-btn:hover,
@@ -34,6 +37,8 @@
             background: var(--color-primary);
             color: white;
             border-color: var(--color-primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -60,7 +65,7 @@
         </div>
     </header>
 
-    <section class="treks-section container">
+    <section class="treks-section container" style="padding-top: 120px;">
         <h2 class="section-title">Day Hikes & Short Walks</h2>
         <p class="section-subtitle">Experience nature without the long commitment</p>
 

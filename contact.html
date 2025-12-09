@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -35,13 +35,13 @@
         </div>
     </header>
 
-    <section class="contact-section container">
+    <section class="contact-section container" style="padding-top: 140px;">
         <h2 class="section-title">Get in Touch</h2>
         <p class="section-subtitle">We'd love to hear from you. Start planning your adventure today.</p>
 
         <div class="contact-container">
             <form action="#" method="POST"
-                style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow-md);">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -63,17 +63,23 @@
             </form>
 
             <div style="text-align: center;">
-                <h3 style="margin-bottom: 1rem;">Connect With Us</h3>
-                <div style="display: flex; justify-content: center; gap: 1.5rem; font-size: 1.5rem;">
-                    <a href="#" style="color: var(--color-primary);">WhatsApp</a>
-                    <a href="#" style="color: var(--color-primary);">Instagram</a>
-                    <a href="#" style="color: var(--color-primary);">Facebook</a>
+                <h3 style="margin-bottom: 2rem; font-size: 1.5rem;">Connect With Us</h3>
+                <div style="display: flex; justify-content: center; gap: 2rem; font-size: 1.2rem; font-weight: 600;">
+                    <a href="#" style="color: var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="#" style="color: var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" style="color: var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
+                        <span>Facebook</span>
+                    </a>
                 </div>
-                <div style="margin-top: 2rem;">
+                <div style="margin-top: 3rem;">
                     <!-- Simple Map Placeholder -->
                     <div
-                        style="background: #eee; height: 300px; width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
-                        <span style="color: #777;">Map Integration (Google Maps)</span>
+                        style="background: #eef2f5; height: 350px; width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid #ddd;">
+                        <span style="color: #888; font-weight: 500;">Map Integration (Google Maps)</span>
                     </div>
                 </div>
             </div>
