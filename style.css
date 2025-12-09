@@ -401,6 +401,12 @@ header {
     font-size: 0.95rem;
     line-height: 1.7;
     flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Limit description lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* -- Choose Us -- */
@@ -586,29 +592,53 @@ button[type="submit"] {
 .blog-section {
     padding: 8rem 0;
     background-color: #fafafa;
-    /* Slight gray bg to separate from white cards */
+}
+
+/* New: Blog Filters */
+.blog-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.blog-filter-btn {
+    padding: 10px 24px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    background: white;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.blog-filter-btn:hover,
+.blog-filter-btn.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
 }
 
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    /* Allows 4 columns */
     gap: 2.5rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .blog-card {
     background: var(--color-white);
     border-radius: 16px;
-    /* Softer corners */
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    /* Very subtle, premium shadow */
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
     flex-direction: column;
     border: none;
-    /* Removed border */
     position: relative;
     top: 0;
 }
@@ -620,7 +650,6 @@ button[type="submit"] {
 
 .blog-image {
     height: 220px;
-    /* Slight increase */
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -631,7 +660,6 @@ button[type="submit"] {
     height: 100%;
     object-fit: cover;
     transition: transform 0.8s ease;
-    /* Smoother zoom */
 }
 
 .blog-card:hover .blog-image img {
@@ -646,28 +674,38 @@ button[type="submit"] {
 }
 
 .blog-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    /* Slightly reduced for better balance */
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     line-height: 1.35;
     color: var(--color-primary);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limit title lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .blog-desc {
     font-size: 0.95rem;
     color: #666;
-    line-height: 1.7;
-    margin-bottom: 2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
     flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Limit description lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .blog-card .btn {
     border-radius: 8px;
-    /* Less pill-like, more button-like */
     padding: 10px 24px;
     font-size: 0.9rem;
     align-self: flex-start;
-    /* Align left */
     background-color: transparent;
     border: 2px solid var(--color-accent);
     color: var(--color-accent);
