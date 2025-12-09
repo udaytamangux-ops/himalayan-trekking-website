@@ -64,6 +64,39 @@ img {
     display: block;
 }
 
+/* -- Animations -- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-load {
+    animation: fadeIn 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* -- Typography & Utilities -- */
 .container {
     max-width: 1200px;
@@ -298,24 +331,31 @@ header {
     gap: 3rem;
 }
 
-/* UPDATE 5: Card Size Standardization */
+/* -- Trek Cards Refined -- */
 .trek-card {
     background: var(--color-white);
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Lift effect */
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.03);
-    max-height: 450px;
-    /* Increased to allow content, 350px is often too small for full cards */
+    height: 100%;
+    /* Uniform height in grid */
     display: flex;
     flex-direction: column;
 }
 
+.trek-card:hover {
+    transform: translateY(-12px);
+    /* Enhanced lift */
+    box-shadow: var(--shadow-lg);
+}
+
 .trek-image {
-    height: 200px;
-    /* Fixed height for image */
+    height: 240px;
+    /* Adjusted proportional height */
     overflow: hidden;
     position: relative;
     flex-shrink: 0;
@@ -325,41 +365,42 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 0.8s ease;
+    /* Slower zoom */
 }
 
 .trek-card:hover .trek-image img {
-    transform: scale(1.08);
+    transform: scale(1.15);
+    /* Zoom in */
 }
 
 .trek-content {
-    padding: 1.5rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 .trek-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
 .trek-meta {
     color: #888;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     font-weight: 500;
 }
 
 .trek-description {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     color: #555;
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.7;
     flex-grow: 1;
-    /* Pushes button to bottom */
 }
 
 /* -- Choose Us -- */
@@ -456,19 +497,64 @@ footer {
     color: var(--color-white);
 }
 
-/* -- Contact Form -- */
+/* -- Contact Form Refined -- */
 .contact-section {
     padding: 8rem 0;
-    /* Spacing */
 }
 
 .contact-container {
     display: grid;
     grid-template-columns: 1fr;
-    /* layout */
     gap: 4rem;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    /* Increased spacing */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px;
+    /* Consistent padding */
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(251, 185, 25, 0.1);
+}
+
+.form-group textarea {
+    height: 180px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    /* Spacing */
 }
 
 /* -- About Page -- */
@@ -529,13 +615,14 @@ footer {
     .hero {
         padding: 0 20px;
         height: auto;
-        min-height: 80vh;
+        min-height: 85vh;
+        /* Taller hero on mobile */
         margin-bottom: 2rem;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
-        margin-top: 4rem;
+        font-size: 2.2rem;
+        margin-top: 5rem;
     }
 
     .search-container {
@@ -548,10 +635,35 @@ footer {
         margin-top: 1rem;
     }
 
+    .trek-grid {
+        grid-template-columns: 1fr;
+        /* Single column for cards */
+        gap: 2.5rem;
+    }
+
+    .trek-card {
+        max-height: none;
+        /* Let content flow on mobile */
+        height: auto;
+    }
+
+    .trek-image {
+        height: 220px;
+    }
+
     .treks-section,
     .choose-us,
     .about-section,
     .contact-section {
         padding: 5rem 0;
+    }
+
+    .contact-container {
+        padding: 0 1rem;
+    }
+
+    form {
+        padding: 1.5rem !important;
+        /* Override inline padding if any */
     }
 }
