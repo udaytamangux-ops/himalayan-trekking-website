@@ -987,3 +987,259 @@ button[type="submit"] {
         padding: 3rem 20px;
     }
 }
+/* -- Trek Card V2 Enhancements -- */
+.trek-card {
+    position: relative; 
+}
+
+.trek-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+    align-items: center;
+}
+
+.trek-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.trek-difficulty {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.difficulty-easy { background-color: #e6fcf5; color: #0ca678; }
+.difficulty-moderate { background-color: #fff9db; color: #f59f00; }
+.difficulty-hard { background-color: #fff5f5; color: #fa5252; }
+
+.trek-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.trek-price span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #888;
+}
+
+/* -- Trek Full View Page -- */
+.trek-view-hero {
+    height: 70vh;
+    min-height: 500px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.trek-view-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.trek-view-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.trek-view-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.trek-view-tagline {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.trek-details-bar {
+    background: white;
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: -4rem; /* Overlap hero */
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.detail-item {
+    text-align: center;
+}
+
+.detail-label {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.detail-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Content Layout */
+.trek-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    padding: 5rem 0;
+    align-items: start; /* Prevent sidebar stretching */
+}
+
+.trek-main h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.trek-main h2:first-child { margin-top: 0; }
+
+.highlights-list {
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.highlights-list li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.highlights-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* Accordion Itinerary */
+.itinerary-item {
+    border-bottom: 1px solid #eee;
+}
+
+.itinerary-trigger {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem 0;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itinerary-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    color: #666;
+    line-height: 1.6;
+}
+
+.itinerary-item.active .itinerary-content {
+    max-height: 500px; /* Arbitrary large number */
+    padding-bottom: 1.5rem;
+}
+
+/* Sticky Sidebar */
+.trek-sidebar {
+    position: sticky;
+    top: 120px; /* Below navbar */
+    background: #f8f9fa;
+    padding: 2.5rem;
+    border-radius: 12px;
+}
+
+.book-now-card {
+    text-align: center;
+}
+
+.price-tag {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.price-sub {
+    color: #888;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.inquire-link {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    color: #666;
+}
+
+/* Mobile Adjustments for Trek View */
+@media (max-width: 900px) {
+    .trek-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .trek-sidebar {
+        position: static;
+        order: -1; 
+        margin-bottom: 3rem;
+    }
+
+    .trek-details-bar {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 0;
+        border-radius: 0;
+    }
+    
+    .trek-view-hero {
+        height: 50vh;
+    }
+    
+    .trek-view-title {
+        font-size: 2.5rem;
+    }
+}
