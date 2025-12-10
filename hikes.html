@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hikes | Himalayan Adventures</title>
-    <!-- UPDATE: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <!-- UPDATE: AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
@@ -55,7 +53,6 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="treks.html">Treks</a></li>
                     <li><a href="hikes.html" class="active">Hikes</a></li>
-                    <!-- UPDATE: Blog Link -->
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -71,64 +68,93 @@
 
     <section class="treks-section container" style="padding-top: 100px;">
         <h2 class="section-title" data-aos="fade-up">Day Hikes & Short Walks</h2>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Experience nature without the long
-            commitment</p>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Experience the beauty of Nepal in just one
+            day</p>
 
         <div class="filters" data-aos="fade-up" data-aos-delay="200">
             <button class="filter-btn active">All</button>
-            <button class="filter-btn">1 Day</button>
-            <button class="filter-btn">2-3 Days</button>
+            <button class="filter-btn">Kathmandu Valley</button>
+            <button class="filter-btn">Pokhara</button>
+            <button class="filter-btn">Nature Walks</button>
         </div>
 
         <div class="trek-grid">
-            <!-- Hike 1 -->
+            <!-- Hike 1: Nagarkot Sunrise -->
             <div class="trek-card" data-aos="fade-up">
                 <div class="trek-image">
-                    <img src="images/trek_annapurna.png" alt="Nagarkot Hike">
+                    <img src="images/trek_everest.png" alt="Nagarkot Sunrise">
                 </div>
                 <div class="trek-content">
-                    <h3 class="trek-title">Nagarkot Panorama</h3>
+                    <h3 class="trek-title">Nagarkot Sunrise Hike</h3>
                     <div class="trek-meta">
-                        <span>1 Day</span>
-                        <span>Easy</span>
+                        <span>📅 1 Day</span>
+                        <span class="trek-difficulty difficulty-easy">🏔️ Easy</span>
                     </div>
-                    <p class="trek-description">A beautiful day hike near Kathmandu offering panoramic views of the
-                        Himalayas including Everest.</p>
-                    <a href="#" class="btn">View Details</a>
+                    <div class="trek-price">
+                        $80 <span>/ person</span>
+                    </div>
+                    <p class="trek-description">Witness a breathtaking sunrise over the Himalayas and hike down through
+                        pine forests and villages.</p>
+                    <a href="hike-view.html" class="btn">See Details</a>
                 </div>
             </div>
 
-            <!-- Hike 2 -->
+            <!-- Hike 2: Champadevi -->
             <div class="trek-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="trek-image">
-                    <img src="images/trek_langtang.png" alt="Shivapuri Hike">
+                    <img src="images/trek_annapurna.png" alt="Champadevi Hike">
                 </div>
                 <div class="trek-content">
-                    <h3 class="trek-title">Shivapuri Peak</h3>
+                    <h3 class="trek-title">Champadevi Hill Hike</h3>
                     <div class="trek-meta">
-                        <span>1 Day</span>
-                        <span>Moderate</span>
+                        <span>📅 1 Day</span>
+                        <span class="trek-difficulty difficulty-moderate">🏔️ Moderate</span>
                     </div>
-                    <p class="trek-description">Walk through the lush Shivapuri National Park to reach the peak for
-                        amazing city and mountain views.</p>
-                    <a href="#" class="btn">View Details</a>
+                    <div class="trek-price">
+                        $65 <span>/ person</span>
+                    </div>
+                    <p class="trek-description">A fulfilling climb to the third highest hill around Kathmandu valley,
+                        offering panoramic views.</p>
+                    <a href="hike-view.html" class="btn">See Details</a>
                 </div>
             </div>
 
-            <!-- Hike 3 -->
+            <!-- Hike 3: Shivapuri -->
             <div class="trek-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="trek-image">
-                    <img src="images/trek_everest.png" alt="Dhampus Hike">
+                    <img src="images/trek_langtang.png" alt="Shivapuri Park">
                 </div>
                 <div class="trek-content">
-                    <h3 class="trek-title">Dhampus Village</h3>
+                    <h3 class="trek-title">Shivapuri National Park</h3>
                     <div class="trek-meta">
-                        <span>2 Days</span>
-                        <span>Easy</span>
+                        <span>📅 1 Day</span>
+                        <span class="trek-difficulty difficulty-moderate">🏔️ Moderate</span>
                     </div>
-                    <p class="trek-description">A gentle walk through traditional Gurung villages with a stunning
-                        backdrop of the Annapurnas.</p>
-                    <a href="#" class="btn">View Details</a>
+                    <div class="trek-price">
+                        $90 <span>/ person</span>
+                    </div>
+                    <p class="trek-description">Explore the watershed of Kathmandu. Rich in flora, fauna, and Buddhist
+                        monasteries.</p>
+                    <a href="hike-view.html" class="btn">See Details</a>
+                </div>
+            </div>
+            <!-- Hike 4: Sarangkot -->
+            <div class="trek-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="trek-image">
+                    <img src="images/trek_annapurna.png" alt="Sarangkot Hike">
+                </div>
+                <div class="trek-content">
+                    <h3 class="trek-title">Sarangkot Hike (Pokhara)</h3>
+                    <div class="trek-meta">
+                        <span>📅 1 Day</span>
+                        <span class="trek-difficulty difficulty-easy">🏔️ Easy</span>
+                    </div>
+                    <div class="trek-price">
+                        $50 <span>/ person</span>
+                    </div>
+                    <p class="trek-description">The best viewpoint in Pokhara for the Annapurna range and Dhaulagiri.
+                        Easy and rewarding.</p>
+                    <a href="hike-view.html" class="btn">See Details</a>
                 </div>
             </div>
         </div>
@@ -145,7 +171,6 @@
         </div>
     </footer>
 
-    <!-- UPDATE: AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
