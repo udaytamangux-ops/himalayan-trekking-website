@@ -1243,3 +1243,159 @@ button[type="submit"] {
         font-size: 2.5rem;
     }
 }
+
+/* -- V2 Premium Trek/Hike View Redesign -- */
+
+/* Hero V2 */
+.trek-view-hero-v2 {
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Reusing overlay */
+.trek-view-hero-v2 .trek-view-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+}
+
+.trek-view-title-v2 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    line-height: 1.1;
+}
+
+.trek-tagline-v2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.95;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.hero-scroll-btn {
+    position: absolute;
+    bottom: 40px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-scroll-btn:hover {
+    background: white;
+    color: var(--color-primary);
+    border-color: white;
+}
+
+/* Layout V2 */
+.trek-content-wrapper {
+    max-width: 1100px;
+    margin: 6rem auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 6rem;
+    align-items: start;
+}
+
+/* Vertical Info List */
+.trek-info-list {
+    list-style: none;
+    margin-bottom: 3rem;
+    background: #fdfdfd;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid #eee;
+    box-shadow: var(--shadow-sm);
+}
+
+.trek-info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.trek-info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.info-value {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+}
+
+/* Floating Action Button (FAB) */
+.fab-book-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(251, 185, 25, 0.4);
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    border: none;
+}
+
+.fab-book-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(251, 185, 25, 0.5);
+    background-color: #e0a517;
+}
+
+/* Responsive V2 */
+@media (max-width: 900px) {
+    .trek-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin: 4rem auto;
+    }
+
+    .trek-view-title-v2 {
+        font-size: 3rem;
+    }
+    
+    .fab-book-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+}
+

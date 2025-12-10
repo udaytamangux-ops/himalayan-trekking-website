@@ -14,6 +14,12 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom tweaks for this page if needed */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,145 +45,158 @@
         </div>
     </header>
 
-    <!-- Full Width Hero -->
-    <div class="trek-view-hero" style="background-image: url('images/trek_everest.png');">
+    <!-- Hero V2 -->
+    <div class="trek-view-hero-v2" style="background-image: url('images/trek_everest.png');">
         <div class="trek-view-overlay"></div>
         <div class="trek-view-content" data-aos="fade-up">
-            <h1 class="trek-view-title">Everest Base Camp Trek</h1>
-            <p class="trek-view-tagline">"Your Journey to the Roof of the World"</p>
+            <h1 class="trek-view-title-v2">Everest Base Camp</h1>
+            <p class="trek-tagline-v2">Journey to the Roof of the World</p>
         </div>
+        <button class="hero-scroll-btn" onclick="document.getElementById('details').scrollIntoView();">Learn More
+            ↓</button>
     </div>
 
-    <div class="container" style="position: relative;">
-        <!-- Details Bar (Overlapping Hero) -->
-        <div class="trek-details-bar" data-aos="fade-up" data-aos-delay="100">
-            <div class="detail-item">
-                <span class="detail-label">Duration</span>
-                <span class="detail-value">📅 14 Days</span>
-            </div>
-            <div class="detail-item">
-                <span class="detail-label">Difficulty</span>
-                <span class="detail-value">🏔️ Hard</span>
-            </div>
-            <div class="detail-item">
-                <span class="detail-label">Max Altitude</span>
-                <span class="detail-value">📏 5,364m</span>
-            </div>
-            <div class="detail-item">
-                <span class="detail-label">Best Season</span>
-                <span class="detail-value">🍂 Mar-May, Sep-Nov</span>
-            </div>
-        </div>
+    <!-- Main Content V2 -->
+    <div class="trek-content-wrapper" id="details">
 
-        <!-- Main Content Layout -->
-        <div class="trek-layout">
-            <!-- Left Column: Content -->
-            <div class="trek-main">
-                <h2 data-aos="fade-up">About the Trek</h2>
-                <p style="margin-bottom: 2rem; color: #555; line-height: 1.8;">
-                    The Everest Base Camp Trek is more than just a hike; it’s a pilgrimage to the base of the highest
-                    mountain in the world. Walk in the footsteps of legends like Edmund Hillary and Tenzing Norgay.
-                    You’ll traverse suspension bridges adorned with prayer flags, explore the vibrant Sherpa town of
-                    Namche
-                    Bazaar, and witness the raw beauty of the Himalayas.
-                </p>
+        <!-- Left: Narrative & Itinerary -->
+        <div class="trek-narrative">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;" data-aos="fade-up">The Experience
+            </h2>
+            <p style="margin-bottom: 2rem; color: #555; line-height: 1.8; font-size: 1.1rem;" data-aos="fade-up">
+                The Everest Base Camp Trek is more than just a hike; it’s a pilgrimage to the base of the highest
+                mountain in the world. Walk in the footsteps of legends like Edmund Hillary and Tenzing Norgay.
+                You’ll traverse suspension bridges adorned with prayer flags, explore the vibrant Sherpa town of Namche
+                Bazaar, and witness the raw beauty of the Himalayas.
+            </p>
 
-                <h2 data-aos="fade-up">Highlights</h2>
-                <ul class="highlights-list" data-aos="fade-up">
-                    <li>Stand at the base of Mt. Everest (8,848m)</li>
-                    <li>Panoramic views from Kala Patthar</li>
-                    <li>Cultural immersion in Sherpa villages</li>
-                    <li>Visit the famous Tengboche Monastery</li>
-                    <li>Scenic flight to Lukla</li>
-                </ul>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--color-primary);" data-aos="fade-up">
+                Highlights</h3>
+            <ul class="highlights-list" data-aos="fade-up">
+                <li>Stand at the base of Mt. Everest (8,848m)</li>
+                <li>Panoramic views from Kala Patthar</li>
+                <li>Cultural immersion in Sherpa villages</li>
+                <li>Visit the famous Tengboche Monastery</li>
+                <li>Scenic flight to Lukla</li>
+            </ul>
 
-                <h2 data-aos="fade-up">Itinerary</h2>
-                <div class="trek-itinerary" data-aos="fade-up">
-                    <!-- Day 1 -->
-                    <div class="itinerary-item">
-                        <button class="itinerary-trigger">
-                            <span>Day 1: Arrival in Kathmandu</span>
-                            <span style="font-size: 1.5rem;">+</span>
-                        </button>
-                        <div class="itinerary-content">
-                            Arrival at Tribhuvan International Airport. Transfer to hotel. Welcome dinner and briefing.
-                        </div>
-                    </div>
-                    <!-- Day 2 -->
-                    <div class="itinerary-item">
-                        <button class="itinerary-trigger">
-                            <span>Day 2: Flight to Lukla & Trek to Phakding</span>
-                            <span style="font-size: 1.5rem;">+</span>
-                        </button>
-                        <div class="itinerary-content">
-                            Early morning scenic flight to Lukla (2,860m). Begin trek to Phakding (2,610m). Hike
-                            duration: 3-4 hours.
-                        </div>
-                    </div>
-                    <!-- Day 3 -->
-                    <div class="itinerary-item">
-                        <button class="itinerary-trigger">
-                            <span>Day 3: Trek to Namche Bazaar</span>
-                            <span style="font-size: 1.5rem;">+</span>
-                        </button>
-                        <div class="itinerary-content">
-                            Trek through pine forests and cross suspension bridges. Reach the gateway to Everest, Namche
-                            Bazaar (3,440m). Hike duration: 5-6 hours.
-                        </div>
-                    </div>
-                    <!-- Day 4 -->
-                    <div class="itinerary-item">
-                        <button class="itinerary-trigger">
-                            <span>Day 4: Acclimatization Day in Namche</span>
-                            <span style="font-size: 1.5rem;">+</span>
-                        </button>
-                        <div class="itinerary-content">
-                            Short hike to Everest View Hotel for panoramic views. Explore the Sherpa Culture Museum.
-                        </div>
-                    </div>
-                    <!-- Day 5-14 Placeholder -->
-                    <div class="itinerary-item">
-                        <button class="itinerary-trigger">
-                            <span>Day 5 - 14: The Ascent & Return</span>
-                            <span style="font-size: 1.5rem;">+</span>
-                        </button>
-                        <div class="itinerary-content">
-                            Trek to Tengboche, Dingboche, Lobuche, Gorakshep, and finally Everest Base Camp. Return via
-                            Pheriche and Namche to Lukla. Fly back to Kathmandu.
-                        </div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--color-primary); margin-top: 3rem;"
+                data-aos="fade-up">Itinerary</h3>
+            <div class="trek-itinerary" data-aos="fade-up">
+                <!-- Day 1 -->
+                <div class="itinerary-item">
+                    <button class="itinerary-trigger">
+                        <span>Day 1: Arrival in Kathmandu</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </button>
+                    <div class="itinerary-content">
+                        Arrival at Tribhuvan International Airport. Transfer to hotel. Welcome dinner and briefing.
                     </div>
                 </div>
+                <!-- Day 2 -->
+                <div class="itinerary-item">
+                    <button class="itinerary-trigger">
+                        <span>Day 2: Flight to Lukla & Trek to Phakding</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </button>
+                    <div class="itinerary-content">
+                        Early morning scenic flight to Lukla (2,860m). Begin trek to Phakding (2,610m). Hike duration:
+                        3-4 hours.
+                    </div>
+                </div>
+                <!-- Day 3 -->
+                <div class="itinerary-item">
+                    <button class="itinerary-trigger">
+                        <span>Day 3: Trek to Namche Bazaar</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </button>
+                    <div class="itinerary-content">
+                        Trek through pine forests and cross suspension bridges. Reach the gateway to Everest, Namche
+                        Bazaar (3,440m). Hike duration: 5-6 hours.
+                    </div>
+                </div>
+                <!-- Day 4 -->
+                <div class="itinerary-item">
+                    <button class="itinerary-trigger">
+                        <span>Day 4: Acclimatization Day in Namche</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </button>
+                    <div class="itinerary-content">
+                        Short hike to Everest View Hotel for panoramic views. Explore the Sherpa Culture Museum.
+                    </div>
+                </div>
+                <!-- Day 5-14 Placeholder -->
+                <div class="itinerary-item">
+                    <button class="itinerary-trigger">
+                        <span>Day 5 - 14: The Ascent & Return</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </button>
+                    <div class="itinerary-content">
+                        Trek to Tengboche, Dingboche, Lobuche, Gorakshep, and finally Everest Base Camp. Return via
+                        Pheriche and Namche to Lukla. Fly back to Kathmandu.
+                    </div>
+                </div>
+            </div>
 
-                <!-- Testimonial -->
-                <div class="testimonial-card" style="margin-top: 4rem;" data-aos="fade-up">
+            <!-- Testimonials -->
+            <div style="margin-top: 4rem;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--color-primary);" data-aos="fade-up">
+                    Traveler Reviews</h3>
+                <div class="testimonial-card" data-aos="fade-up" style="background: #fff; border: 1px solid #eee;">
                     <p class="testimonial-text">"The Everest Base Camp trek was the experience of a lifetime! Our guide
                         was
                         amazing, and the views were beyond words!"</p>
-                    <p class="testimonial-author">— Sarah J., UK</p>
-                </div>
-            </div>
-
-            <!-- Right Column: Sticky Sidebar -->
-            <div class="trek-sidebar" data-aos="fade-left">
-                <div class="book-now-card">
-                    <div class="price-tag">$1,499</div>
-                    <span class="price-sub">per person</span>
-                    <button class="btn book-btn">Book Now</button>
-                    <a href="contact.html" class="inquire-link">Have questions? Contact Us</a>
-
-                    <div style="margin-top: 2rem; border-top: 1px solid #ddd; padding-top: 1rem; text-align: left;">
-                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Includes:</p>
-                        <ul style="font-size: 0.9rem; color: #666; list-style: disc; padding-left: 1.2rem;">
-                            <li>Airport Transfers</li>
-                            <li>Permits & Fees</li>
-                            <li>Accommodation</li>
-                            <li>English Speaking Guide</li>
-                        </ul>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%;"></div>
+                        <div>
+                            <p class="testimonial-author" style="margin: 0;">Sarah J.</p>
+                            <span style="font-size: 0.85rem; color: #888;">United Kingdom</span>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
+
+        <!-- Right: Vertical Info Card -->
+        <div class="trek-sidebar-v2" data-aos="fade-left">
+            <ul class="trek-info-list" style="position: sticky; top: 120px;">
+                <li class="trek-info-item">
+                    <span class="info-label">⏱️ Duration</span>
+                    <span class="info-value">14 Days</span>
+                </li>
+                <li class="trek-info-item">
+                    <span class="info-label">🏔️ Difficulty</span>
+                    <span class="info-value">Hard</span>
+                </li>
+                <li class="trek-info-item">
+                    <span class="info-label">📏 Max Altitude</span>
+                    <span class="info-value">5,364m</span>
+                </li>
+                <li class="trek-info-item">
+                    <span class="info-label">🍂 Best Season</span>
+                    <span class="info-value">Mar-May, Sep-Nov</span>
+                </li>
+                <li class="trek-info-item">
+                    <span class="info-label">👥 Group Size</span>
+                    <span class="info-value">2 - 12 Pax</span>
+                </li>
+                <li class="trek-info-item"
+                    style="display: block; text-align: center; border-bottom: none; padding-top: 2rem;">
+                    <p style="font-size: 0.9rem; color: #888; margin-bottom: 0.5rem;">Starting from</p>
+                    <span style="font-size: 2.5rem; font-weight: 800; color: var(--color-accent);">$1,499</span>
+                    <p style="font-size: 0.9rem; color: #888; margin-bottom: 0;">per person</p>
+                </li>
+            </ul>
+        </div>
+
     </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab-book-btn" onclick="window.location.href='contact.html'">
+        <span>Book Now</span>
+        <span style="background: rgba(255,255,255,0.2); padding: 5px 12px; border-radius: 20px;">➜</span>
+    </button>
 
     <footer>
         <div class="container">
@@ -200,11 +219,6 @@
             item.addEventListener('click', () => {
                 const parent = item.parentElement;
                 parent.classList.toggle('active');
-
-                // Optional: Close others
-                // document.querySelectorAll('.itinerary-item').forEach(other => {
-                //     if(other !== parent) other.classList.remove('active');
-                // });
             });
         });
     </script>

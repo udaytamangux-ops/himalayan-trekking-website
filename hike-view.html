@@ -14,6 +14,11 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,134 +44,144 @@
         </div>
     </header>
 
-    <!-- Full Width Hero -->
-    <div class="trek-view-hero" style="background-image: url('images/trek_everest.png');">
+    <!-- Hero V2 -->
+    <div class="trek-view-hero-v2" style="background-image: url('images/trek_everest.png');">
         <div class="trek-view-overlay"></div>
         <div class="trek-view-content" data-aos="fade-up">
-            <h1 class="trek-view-title">Nagarkot Sunrise Hike</h1>
-            <p class="trek-view-tagline">"Sunrise over the mountains, memories for a lifetime"</p>
+            <h1 class="trek-view-title-v2">Nagarkot Sunrise Hike</h1>
+            <p class="trek-tagline-v2">Sunrise over the mountains, memories for a lifetime</p>
         </div>
+        <button class="hero-scroll-btn" onclick="document.getElementById('details').scrollIntoView();">View Itinerary
+            ↓</button>
     </div>
 
-    <div class="container" style="position: relative;">
-        <!-- Details Bar (Overlapping Hero) -->
-        <div class="trek-details-bar" data-aos="fade-up" data-aos-delay="100">
-            <div class="detail-item">
-                <span class="detail-label">Duration</span>
-                <span class="detail-value">📅 1 Day</span>
-            </div>
-            <div class="detail-item">
-                <span class="detail-label">Difficulty</span>
-                <span class="detail-value">🏔️ Easy</span>
-            </div>
-            <div class="detail-item">
-                <span class="detail-label">Max Altitude</span>
-                <span class="detail-value">📏 2,175m</span>
-            </div>
-            <div class="detail-item">
-                <span class="detail-label">Best Season</span>
-                <span class="detail-value">🍂 All Year</span>
-            </div>
-        </div>
+    <!-- Main Content V2 -->
+    <div class="trek-content-wrapper" id="details">
 
-        <!-- Main Content Layout -->
-        <div class="trek-layout">
-            <!-- Left Column: Content -->
-            <div class="trek-main">
-                <h2 data-aos="fade-up">About the Hike</h2>
-                <p style="margin-bottom: 2rem; color: #555; line-height: 1.8;">
-                    Escape the hustle and bustle of Kathmandu with our Nagarkot Sunrise Hike.
-                    Nagarkot is famous for its breathtaking sunrise views of the Himalayas, including Mount Everest,
-                    Annapurna, Manaslu, and Ganesh Himal. After the sunrise, we enjoy a peaceful hike downhill through
-                    charming villages, terraced fields, and pine forests to catch a glimpse of rural Nepali life.
-                    It's the perfect quick getaway to recharge your spirit.
-                </p>
+        <!-- Left: Narrative & Itinerary -->
+        <div class="trek-narrative">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;" data-aos="fade-up">About the Hike
+            </h2>
+            <p style="margin-bottom: 2rem; color: #555; line-height: 1.8; font-size: 1.1rem;" data-aos="fade-up">
+                Escape the hustle and bustle of Kathmandu with our Nagarkot Sunrise Hike.
+                Nagarkot is famous for its breathtaking sunrise views of the Himalayas, including Mount Everest,
+                Annapurna, Manaslu, and Ganesh Himal. After the sunrise, we enjoy a peaceful hike downhill through
+                charming villages, terraced fields, and pine forests to catch a glimpse of rural Nepali life.
+            </p>
 
-                <h2 data-aos="fade-up">Highlights</h2>
-                <ul class="highlights-list" data-aos="fade-up">
-                    <li>Spectacular sunrise over 8 Himalayan ranges</li>
-                    <li>Easy downhill hike through pine forests</li>
-                    <li>Visit the ancient Changunarayan Temple (UNESCO Site)</li>
-                    <li>Authentic local lunch in a village</li>
-                    <li>Private transport to and from Kathmandu</li>
-                </ul>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--color-primary);" data-aos="fade-up">
+                Highlights</h3>
+            <ul class="highlights-list" data-aos="fade-up">
+                <li>Spectacular sunrise over 8 Himalayan ranges</li>
+                <li>Easy downhill hike through pine forests</li>
+                <li>Visit the ancient Changunarayan Temple (UNESCO Site)</li>
+                <li>Authentic local lunch in a village</li>
+                <li>Private transport to and from Kathmandu</li>
+            </ul>
 
-                <h2 data-aos="fade-up">Itinerary</h2>
-                <div class="trek-itinerary" data-aos="fade-up">
-                    <!-- Morning -->
-                    <div class="itinerary-item active">
-                        <button class="itinerary-trigger">
-                            <span>04:30 AM: Drive to Nagarkot</span>
-                            <span style="font-size: 1.5rem;">+</span>
-                        </button>
-                        <div class="itinerary-content" style="max-height: 500px; padding-bottom: 1.5rem;">
-                            Early morning pick up from your hotel in Kathmandu. 1.5-hour drive to Nagarkot viewpoint.
-                        </div>
-                    </div>
-                    <!-- Sunrise -->
-                    <div class="itinerary-item">
-                        <button class="itinerary-trigger">
-                            <span>06:00 AM: Sunrise View</span>
-                            <span style="font-size: 1.5rem;">+</span>
-                        </button>
-                        <div class="itinerary-content">
-                            Witness the golden sun rising over the snow-capped peaks. Enjoy hot coffee/tea with the
-                            view.
-                        </div>
-                    </div>
-                    <!-- Hike -->
-                    <div class="itinerary-item">
-                        <button class="itinerary-trigger">
-                            <span>08:00 AM: Begin Hike to Changunarayan</span>
-                            <span style="font-size: 1.5rem;">+</span>
-                        </button>
-                        <div class="itinerary-content">
-                            Start the 3-4 hour easy downhill hike. We pass through Telkot village and lush local
-                            forests.
-                        </div>
-                    </div>
-                    <!-- Lunch & Return -->
-                    <div class="itinerary-item">
-                        <button class="itinerary-trigger">
-                            <span>12:00 PM: Temple Visit & Lunch</span>
-                            <span style="font-size: 1.5rem;">+</span>
-                        </button>
-                        <div class="itinerary-content">
-                            Explore the Changunarayan Temple. Enjoy a traditional Nepali Thali lunch. Drive back to
-                            Kathmandu by 2:00 PM.
-                        </div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--color-primary); margin-top: 3rem;"
+                data-aos="fade-up">One Day Itinerary</h3>
+            <div class="trek-itinerary" data-aos="fade-up">
+                <!-- Morning -->
+                <div class="itinerary-item active">
+                    <button class="itinerary-trigger">
+                        <span>04:30 AM: Drive to Nagarkot</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </button>
+                    <div class="itinerary-content" style="max-height: 500px; padding-bottom: 1.5rem;">
+                        Early morning pick up from your hotel in Kathmandu. 1.5-hour drive to Nagarkot viewpoint.
                     </div>
                 </div>
+                <!-- Sunrise -->
+                <div class="itinerary-item">
+                    <button class="itinerary-trigger">
+                        <span>06:00 AM: Sunrise View</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </button>
+                    <div class="itinerary-content">
+                        Witness the golden sun rising over the snow-capped peaks. Enjoy hot coffee/tea with the view.
+                    </div>
+                </div>
+                <!-- Hike -->
+                <div class="itinerary-item">
+                    <button class="itinerary-trigger">
+                        <span>08:00 AM: Begin Hike to Changunarayan</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </button>
+                    <div class="itinerary-content">
+                        Start the 3-4 hour easy downhill hike. We pass through Telkot village and lush local forests.
+                    </div>
+                </div>
+                <!-- Lunch & Return -->
+                <div class="itinerary-item">
+                    <button class="itinerary-trigger">
+                        <span>12:00 PM: Temple Visit & Lunch</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </button>
+                    <div class="itinerary-content">
+                        Explore the Changunarayan Temple. Enjoy a traditional Nepali Thali lunch. Drive back to
+                        Kathmandu by 2:00 PM.
+                    </div>
+                </div>
+            </div>
 
-                <!-- Testimonial -->
-                <div class="testimonial-card" style="margin-top: 4rem;" data-aos="fade-up">
+            <!-- Testimonials -->
+            <div style="margin-top: 4rem;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--color-primary);" data-aos="fade-up">
+                    Hiker Stories</h3>
+                <div class="testimonial-card" data-aos="fade-up" style="background: #fff; border: 1px solid #eee;">
                     <p class="testimonial-text">"I didn't have much time in Nepal, but this hike was perfect. The
                         sunrise was magical and the guide was so friendly!"</p>
-                    <p class="testimonial-author">— James T., Australia</p>
-                </div>
-            </div>
-
-            <!-- Right Column: Sticky Sidebar -->
-            <div class="trek-sidebar" data-aos="fade-left">
-                <div class="book-now-card">
-                    <div class="price-tag">$80</div>
-                    <span class="price-sub">per person</span>
-                    <button class="btn book-btn">Book Hike</button>
-                    <a href="contact.html" class="inquire-link">Have questions? Contact Us</a>
-
-                    <div style="margin-top: 2rem; border-top: 1px solid #ddd; padding-top: 1rem; text-align: left;">
-                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Includes:</p>
-                        <ul style="font-size: 0.9rem; color: #666; list-style: disc; padding-left: 1.2rem;">
-                            <li>Private AC Transport</li>
-                            <li>Entrance Fees</li>
-                            <li>Lunch</li>
-                            <li>English Speaking Guide</li>
-                        </ul>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%;"></div>
+                        <div>
+                            <p class="testimonial-author" style="margin: 0;">James T.</p>
+                            <span style="font-size: 0.85rem; color: #888;">Australia</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Right: Vertical Info Card -->
+        <div class="trek-sidebar-v2" data-aos="fade-left">
+            <ul class="trek-info-list" style="position: sticky; top: 120px;">
+                <li class="trek-info-item">
+                    <span class="info-label">⏱️ Duration</span>
+                    <span class="info-value">1 Day</span>
+                </li>
+                <li class="trek-info-item">
+                    <span class="info-label">🏔️ Difficulty</span>
+                    <span class="info-value">Easy</span>
+                </li>
+                <li class="trek-info-item">
+                    <span class="info-label">📏 Max Altitude</span>
+                    <span class="info-value">2,175m</span>
+                </li>
+                <li class="trek-info-item">
+                    <span class="info-label">🍂 Best Season</span>
+                    <span class="info-value">All Year</span>
+                </li>
+                <li class="trek-info-item">
+                    <span class="info-label">👥 Group Size</span>
+                    <span class="info-value">Private</span>
+                </li>
+                <li class="trek-info-item"
+                    style="display: block; text-align: center; border-bottom: none; padding-top: 2rem;">
+                    <p style="font-size: 0.9rem; color: #888; margin-bottom: 0.5rem;">Total Price</p>
+                    <span style="font-size: 2.5rem; font-weight: 800; color: var(--color-accent);">$80</span>
+                    <p style="font-size: 0.9rem; color: #888; margin-bottom: 0;">per person</p>
+                </li>
+            </ul>
+        </div>
+
     </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab-book-btn" onclick="window.location.href='contact.html'">
+        <span>Book This Hike</span>
+        <span style="background: rgba(255,255,255,0.2); padding: 5px 12px; border-radius: 20px;">➜</span>
+    </button>
 
     <footer>
         <div class="container">
